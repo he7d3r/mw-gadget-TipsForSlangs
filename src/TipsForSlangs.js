@@ -3,7 +3,7 @@
  * @author: [[User:Helder.wiki]]
  * @tracking: [[Special:GlobalUsage/User:Helder.wiki/Tools/TipsForSlangs.js]] ([[File:User:Helder.wiki/Tools/TipsForSlangs.js]])
  */
-/*jshint smarttabs: true, boss: true */
+/*jshint smarttabs: true, boss: true, laxbreak:true */
 /*global jQuery, mediaWiki */
 ( function ( mw, $ ) {
 'use strict';
@@ -69,9 +69,9 @@ function addTips (){
 			return $.escapeRE( i );
 		} ),
 		reSlangs = new RegExp( '\\b(' + slangList.join( '|' ) + ')\\b', 'gi' );
-	$( '#mw-content-text *' ).filter(function(){
+	$( '#mw-content-text *' )/*.filter(function(){
 		return !$(this).is('a');
-	})
+	})*/
 	.replaceText(
 		reSlangs,
 		function( match, group ){
@@ -80,7 +80,9 @@ function addTips (){
 	).find( 'span.slang-tip' ).tipsy();
 }
 
-if( mw.config.get( 'wgAction' ) === 'view' ){
+if( $.inArray( mw.config.get('wgAction'), [ 'view', 'purge' ]) !== -1
+	&& ( mw.config.get('wgNamespaceNumber') % 2 === 1 || mw.config.get('wgNamespaceNumber') === 4 )
+){
 	mw.loader.using( [ 'mediawiki.util', 'jquery.tipsy' ], function(){
 		mw.util.addCSS('.slang-tip { text-decoration: none; border-bottom: 1px dotted; cursor: help;}');
 		$( addTips );
