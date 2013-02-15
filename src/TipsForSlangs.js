@@ -25,6 +25,7 @@ var slangs = {
 	AD: 'Artigo em destaque',
 	AB: 'Artigo bom',
 	AND: 'Anexo em destaque',
+	'WP:V': 'Verificabilidade',
 	WP: 'Wikipédia',
 	BOT: 'Programa utilizado para fazer edições automatizadas',
 	PD: 'Página de discussão',
@@ -75,6 +76,10 @@ function addTips (){
 	.replaceText(
 		reSlangs,
 		function( match, group ){
+			if ( group === group.toLowerCase() ) {
+				// If all characters are lower case, there may be (many) false positives
+				return group;
+			}
 			return '<span class="slang-tip" title="' + slangs[ group.toUpperCase() ] + '">' + group + '</span>';
 		}
 	).find( 'span.slang-tip' ).tipsy();
