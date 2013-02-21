@@ -10,27 +10,34 @@
 
 var slangs = {
 	// The key must be in UPPER CASE
+	AB: 'Artigo bom',
+	AD: 'Artigo em destaque',
+	AND: 'Anexo em destaque',
+	BOT: 'Programa utilizado para fazer edições automatizadas',
+	BSRE: 'Biografia sem relevância enciclopédica',
+	CCBYSA: 'Licença Creative Commons que exige atribuição e compartilhamento sob a mesma licença',
+	CDN: 'Critério(s) de notoriedade',
+	COI: 'Conflito de interesses',
+	CV: 'Curriculum vitæ',
+	DP: 'Domínio público',
+	EAB: 'Escolha de um artigo bom',
+	EAD: 'Escolha do artigo em destaque',
+	ESR: 'Eliminação semirrápida',
 	IP: 'Usuário anônimo',
 	IPS: 'Usuários anônimos',
-	PP: 'Página principal',
-	CDN: 'Critério(s) de notoriedade',
-	ESR: 'Eliminação semirrápida',
+	IW: 'Link para uma Wikipédia em outro idioma, ou para outra wiki em português, dependendo do contexto',
+	OTRS: 'Sistema de solicitações baseado em tíquetes (em inglês, Open-source Ticket Request System)',
+	PD: 'Página de discussão',
+	PDU: 'Página de discussão do usuário',
 	PE: 'Páginas para eliminar',
 	PES: 'Páginas para eliminar',
-	IW: 'Link para uma Wikipédia em outro idioma, ou para outra wiki em português, dependendo do contexto',
+	POV: 'Ponto de vista',
+	PP: 'Página principal',
 	PU: 'Página de usuário',
 	PUS: 'Páginas de usuários',
-	EAD: 'Escolha do artigo em destaque',
-	EAB: 'Escolha de um artigo bom',
-	AD: 'Artigo em destaque',
-	AB: 'Artigo bom',
-	AND: 'Anexo em destaque',
+	VDA: 'Violação das leis de direitos autorais',
 	'WP:V': 'Verificabilidade',
-	WP: 'Wikipédia',
-	BOT: 'Programa utilizado para fazer edições automatizadas',
-	PD: 'Página de discussão',
-	BSRE: 'Biografia sem relevância enciclopédica',
-	POV: 'Ponto de vista'
+	WP: 'Wikipédia'
 };
 
 /**
