@@ -85,7 +85,8 @@ function addTips (){
 	).find( 'span.slang-tip' ).tipsy();
 }
 
-if( $.inArray( mw.config.get('wgAction'), [ 'view', 'purge' ]) !== -1
+if( mw.config.get( 'wgDBname' ) === 'ptwiki'
+	&& $.inArray( mw.config.get('wgAction'), [ 'view', 'purge' ]) !== -1
 	&& ( mw.config.get('wgNamespaceNumber') % 2 === 1 || mw.config.get('wgNamespaceNumber') === 4 )
 ){
 	mw.loader.using( [ 'mediawiki.util', 'jquery.tipsy' ], function(){
