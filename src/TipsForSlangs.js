@@ -13,7 +13,7 @@ var slangs = {
 	AB: 'Artigo bom',
 	AD: 'Artigo em destaque',
 	AEDE: 'Argumentos a evitar em discussões de eliminação',
-	AEDE: 'Argumentos pertinentes em discussões de eliminação',
+	APDE: 'Argumentos pertinentes em discussões de eliminação',
 	AND: 'Anexo em destaque',
 	BOT: 'Programa utilizado para fazer edições automatizadas',
 	BSRE: 'Biografia sem relevância enciclopédica',
