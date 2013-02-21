@@ -70,9 +70,9 @@ function addTips (){
 			return $.escapeRE( i );
 		} ),
 		reSlangs = new RegExp( '\\b(' + slangList.join( '|' ) + ')\\b', 'gi' );
-	$( '#mw-content-text *' )/*.filter(function(){
+	$( '#mw-content-text *' ).filter(function(){
 		return !$(this).is('a');
-	})*/
+	})
 	.replaceText(
 		reSlangs,
 		function( match, group ){
