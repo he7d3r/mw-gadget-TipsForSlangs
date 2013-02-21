@@ -69,18 +69,18 @@ function addTips (){
 	var slangList = $.map( slangs, function(v, i){
 			return $.escapeRE( i );
 		} ),
-		reSlangs = new RegExp( '\\b(' + slangList.join( '|' ) + ')\\b', 'gi' );
+		reSlangs = new RegExp( '([^a-záàâãçéêíóôõúü])(' + slangList.join( '|' ) + ')([^a-záàâãçéêíóôõúü])', 'gi' );
 	$( '#mw-content-text *' ).filter(function(){
 		return !$(this).is('a');
 	})
 	.replaceText(
 		reSlangs,
-		function( match, group ){
-			if ( group === group.toLowerCase() ) {
+		function( match, g1, g2, g3 ){
+			if ( g2 === g2.toLowerCase() ) {
 				// If all characters are lower case, there may be (many) false positives
-				return group;
+				return match;
 			}
-			return '<span class="slang-tip" title="' + slangs[ group.toUpperCase() ] + '">' + group + '</span>';
+			return g1 + '<span class="slang-tip" title="' + slangs[ g2.toUpperCase() ] + '">' + g2 + '</span>' + g3;
 		}
 	).find( 'span.slang-tip' ).tipsy();
 }
