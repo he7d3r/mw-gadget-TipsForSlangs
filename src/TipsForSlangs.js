@@ -12,6 +12,8 @@ var slangs = {
 	// The key must be in UPPER CASE
 	AB: 'Artigo bom',
 	AD: 'Artigo em destaque',
+	AEDE: 'Argumentos a evitar em discussões de eliminação',
+	AEDE: 'Argumentos pertinentes em discussões de eliminação',
 	AND: 'Anexo em destaque',
 	BOT: 'Programa utilizado para fazer edições automatizadas',
 	BSRE: 'Biografia sem relevância enciclopédica',
@@ -23,8 +25,8 @@ var slangs = {
 	EAB: 'Escolha de um artigo bom',
 	EAD: 'Escolha do artigo em destaque',
 	ESR: 'Eliminação semirrápida',
-	IP: 'Usuário anônimo',
-	IPS: 'Usuários anônimos',
+	IP: 'Usuário anônimo, identificado pelo número do protocolo de internet utilizado',
+	IPS: 'Usuários anônimos, identificados pelo número do protocolo de internet utilizado',
 	IW: 'Link para uma Wikipédia em outro idioma, ou para outra wiki em português, dependendo do contexto',
 	OTRS: 'Sistema de solicitações baseado em tíquetes (em inglês, Open-source Ticket Request System)',
 	PD: 'Página de discussão',
@@ -35,8 +37,11 @@ var slangs = {
 	PP: 'Página principal',
 	PU: 'Página de usuário',
 	PUS: 'Páginas de usuários',
+	UTC: 'Tempo universal coordenado (em inglês, Coordinated Universal Time)',
 	VDA: 'Violação das leis de direitos autorais',
-	'WP:V': 'Verificabilidade',
+	'WP:V': 'Política de verificabilidade adotada na Wikipédia',
+	'WP:AEDE': 'Argumentos a evitar em discussões de eliminação',
+	'WP:APDE': 'Argumentos pertinentes em discussões de eliminação',
 	WP: 'Wikipédia'
 };
 
