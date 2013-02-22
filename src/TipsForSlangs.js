@@ -30,6 +30,7 @@ var slangs = {
 	IW: 'Link para uma Wikipédia em outro idioma, ou para outra wiki em português, dependendo do contexto',
 	OTRS: 'Sistema de solicitações baseado em tíquetes (em inglês, Open-source Ticket Request System)',
 	PD: 'Página de discussão',
+	PDE: 'Política de eliminação',
 	PDU: 'Página de discussão do usuário',
 	PE: 'Páginas para eliminar',
 	PES: 'Páginas para eliminar',
@@ -42,6 +43,7 @@ var slangs = {
 	'WP:V': 'Política de verificabilidade adotada na Wikipédia',
 	'WP:AEDE': 'Argumentos a evitar em discussões de eliminação',
 	'WP:APDE': 'Argumentos pertinentes em discussões de eliminação',
+	'WP:PDE': 'Política de eliminação',
 	WP: 'Wikipédia'
 };
 
