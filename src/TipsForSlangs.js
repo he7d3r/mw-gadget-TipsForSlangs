@@ -55,6 +55,7 @@ $.fn.replaceText = function( search, replace, text_only ) {
 	return this.each(function(){
 		var node = this.firstChild,
 			val,
+			i,
 			new_val,
 			remove = [];
 		if ( node ) {
@@ -63,6 +64,13 @@ $.fn.replaceText = function( search, replace, text_only ) {
 					val = node.nodeValue;
 					new_val = val.replace( search, replace );
 					if ( new_val !== val ) {
+						new_val = new_val.split( /(<span class="slang-tip".+?<\/span>)/g );
+						for( i = 0; i < new_val.length; i++ ){
+							if( new_val[i].indexOf( '<span class="slang-tip"' ) !== 0 ) {
+								new_val[i] = mw.html.escape( new_val[i] );
+							}
+						}
+						new_val = new_val.join( '' );
 						if ( !text_only && /</.test( new_val ) ) {
 							$(node).before( new_val );
 							remove.push( node );
@@ -83,7 +91,7 @@ function addTips (){
 	var slangList = $.map( slangs, function(v, i){
 			return $.escapeRE( i );
 		} ),
-		reSlangs = new RegExp( '([^a-záàâãçéêíóôõúü])(' + slangList.join( '|' ) + ')([^a-záàâãçéêíóôõúü])', 'gi' );
+		reSlangs = new RegExp( '(^|[^a-záàâãçéêíóôõúü])(' + slangList.join( '|' ) + ')([^a-záàâãçéêíóôõúü]|$)', 'gi' );
 	$( '#mw-content-text *' ).filter(function(){
 		return !$(this).is('a');
 	})
