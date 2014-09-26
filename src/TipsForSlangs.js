@@ -3,8 +3,6 @@
  * @author: Helder (https://github.com/he7d3r)
  * @license: CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0/>
  */
-/*jshint smarttabs: true, boss: true, laxbreak:true */
-/*global jQuery, mediaWiki */
 ( function ( mw, $ ) {
 'use strict';
 
@@ -51,6 +49,7 @@ var slangs = {
  * @author: Siddharth
  * @source: http://net.tutsplus.com/tutorials/javascript-ajax/spotlight-jquery-replacetext/
  */
+/*jshint camelcase: false, boss: true */
 $.fn.replaceText = function( search, replace, text_only ) {
 	return this.each(function(){
 		var node = this.firstChild,
@@ -86,6 +85,7 @@ $.fn.replaceText = function( search, replace, text_only ) {
 		}
 	});
 };
+/*jshint camelcase: true, boss: false */
 
 function addTips (){
 	var slangList = $.map( slangs, function(v, i){
