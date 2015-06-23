@@ -93,7 +93,7 @@
 
 	function addTips() {
 		var slangList = $.map( slangs, function (v, i) {
-				return $.escapeRE( i );
+				return mw.RegExp.escape( i );
 			} ),
 			reSlangs = new RegExp( '(^|[^a-záàâãçéêíóôõúü])(' + slangList.join( '|' ) + ')([^a-záàâãçéêíóôõúü]|$)', 'gi' );
 		$( '#mw-content-text *' ).filter(function () {
@@ -115,7 +115,7 @@
 		&& $.inArray( mw.config.get('wgAction'), [ 'view', 'purge' ]) !== -1
 		&& ( mw.config.get('wgNamespaceNumber') % 2 === 1 || mw.config.get('wgNamespaceNumber') === 4 )
 	) {
-		mw.loader.using( [ 'mediawiki.util', 'jquery.tipsy' ], function () {
+		mw.loader.using( [ 'mediawiki.util', 'jquery.tipsy', 'mediawiki.RegExp' ], function () {
 			mw.util.addCSS('.slang-tip { text-decoration: none; border-bottom: 1px dotted; cursor: help;}');
 			$( addTips );
 		});
